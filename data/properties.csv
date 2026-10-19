@@ -1,0 +1,41 @@
+property_ref,owner_wallet_id,location,city,area_sqm,property_type,survey_number,document_file,submitted_date,status,scenario,notes
+P-001,W1,12 MG Road,Bengaluru,540,Residential,BLR/12/345-A,deed-001.pdf,2025-01-06,Registered,NORMAL_SALE,Clean residential plot.
+P-002,W2,"Backwater Farm, Kumbalangi",Kochi,3200,Agricultural,KOC/08/112-B,deed-002.pdf,2025-01-09,Registered,NORMAL_SALE,Agricultural land.
+P-003,W3,Nariman Point Suite 9,Mumbai,210,Commercial,MUM/21/009-C,deed-003.pdf,2025-01-14,Registered,NORMAL_SALE,Commercial office.
+P-004,W4,7 Besant Nagar,Chennai,480,Residential,CHN/05/220-A,deed-004.pdf,2025-01-18,Registered,NORMAL_SALE,Clean.
+P-005,W5,Jubilee Hills Villa 3,Hyderabad,760,Residential,HYD/14/501-D,deed-005.pdf,2025-01-22,Registered,RAPID_FLIP,Flipped 3x within 30 days (see transfers).
+P-006,W6,Hinjewadi Plot 44,Pune,1200,Agricultural,PUN/30/077-B,deed-006.pdf,2025-01-15,Registered,NORMAL_SALE,Clean.
+P-007,W7,Connaught Place Block C,Delhi,330,Commercial,DEL/02/404-C,deed-007.pdf,2025-02-02,Registered,NORMAL_SALE,Clean.
+P-008,W2,Whitefield Lane 2,Bengaluru,600,Residential,BLR/17/888-A,deed-008.pdf,2025-02-08,Registered,CIRCULAR_TRADE,Traded W2->W3->W2 (wash-trade pattern).
+P-009,W1,Fort Kochi House 11,Kochi,410,Residential,KOC/08/305-A,deed-009.pdf,2025-02-12,Registered,NORMAL_SALE,Clean.
+P-010,W3,Bandra Reclamation 5,Mumbai,290,Residential,MUM/21/610-A,deed-010.pdf,2025-02-20,Registered,NORMAL_SALE,Clean.
+P-011,W4,Adyar Riverside 8,Chennai,520,Residential,CHN/05/330-B,deed-011.pdf,2025-02-25,Registered,NORMAL_SALE,Deed file later reused by P-030.
+P-012,W5,Gachibowli Tower 12,Hyderabad,180,Commercial,HYD/14/777-C,deed-012.pdf,2025-03-03,Registered,NORMAL_SALE,Clean.
+P-013,W6,Koregaon Park 9,Pune,650,Residential,PUN/30/150-A,deed-013.pdf,2025-03-20,Registered,NORMAL_SALE,Clean.
+P-014,W7,Chattarpur Farm 2,Delhi,4000,Agricultural,DEL/02/900-B,deed-014.pdf,2025-03-11,Registered,NORMAL_SALE,Clean.
+P-015,W1,Indiranagar 100ft Rd,Bengaluru,240,Commercial,BLR/12/212-C,deed-015.pdf,2025-03-18,Registered,NORMAL_SALE,Clean.
+P-016,W2,Panampilly Nagar 6,Kochi,470,Residential,KOC/08/418-A,deed-016.pdf,2025-03-26,Registered,NORMAL_SALE,Clean.
+P-017,W3,T Nagar 5th St,Chennai,360,Residential,CHN/05/145-A,deed-017.pdf,2025-04-01,Registered,NORMAL_SALE,Clean.
+P-018,W4,Powai Hills 3,Mumbai,2100,Agricultural,MUM/21/730-B,deed-018.pdf,2025-04-07,Registered,NORMAL_SALE,Clean.
+P-019,W5,Baner Road 21,Pune,540,Residential,PUN/30/260-A,deed-019.pdf,2025-04-14,Registered,NORMAL_SALE,Clean.
+P-020,W7,Saket District Centre,Delhi,300,Residential,DEL/02/333-A,deed-020.pdf,2025-04-20,Registered,NORMAL_SALE,Clean.
+P-021,W7,HSR Layout Sector 2,Bengaluru,420,Residential,BLR/12/566-A,deed-021.pdf,2025-04-28,Registered,NORMAL_SALE,Clean.
+P-022,W1,Banjara Hills Rd 12,Hyderabad,5400,Agricultural,HYD/14/044-B,deed-022.pdf,2025-05-05,Registered,NORMAL_SALE,Clean.
+P-023,W2,Egmore High St 4,Chennai,200,Commercial,CHN/05/901-C,deed-023.pdf,2025-05-12,Registered,NORMAL_SALE,Clean.
+P-024,W3,Viman Nagar 7,Pune,480,Residential,PUN/30/370-A,deed-024.pdf,2025-05-19,Registered,NORMAL_SALE,Clean.
+P-025,W4,12 MG Road,Bengaluru,540,Residential,BLR/12/345-A,deed-025.pdf,2025-05-24,Reverted,DUPLICATE_SURVEY,Same survey+location as P-001 -> submit reverts (DuplicateSurveyLocation).
+P-026,W5,Elamkulam 3,Kochi,330,Residential,KOC-26-INVALID,deed-026.pdf,2025-05-29,Rejected,INVALID_SURVEY_FORMAT,Survey number fails AAA/NN/NNN-X pattern; Registrar rejects.
+P-027,W6,Kalyani Nagar 15,Pune,610,Residential,PUN/30/480-A,deed-027.pdf,2025-06-04,Rejected,FORGED_DEED,Deed inconsistent on manual review; Registrar rejects.
+P-028,W7,Nungambakkam 2,Chennai,290,Residential,CHN/05/155-A,deed-028.pdf,2025-06-09,Registered,NORMAL_SALE,Clean.
+P-029,W1,Aundh Lane 8,Pune,500,Residential,PUN/30/590-A,deed-029.pdf,2025-06-14,Pending,NORMAL_SALE,Left in the Registrar queue to demo the pending workflow.
+P-030,W4,Alwarpet 9,Chennai,450,Residential,CHN/05/660-A,deed-011.pdf,2025-06-19,Reverted,REUSED_DOCUMENT,Reuses P-011's deed file -> identical hash -> submit reverts (DuplicateDocumentHash).
+P-031,W6,Wakad Row 1,Pune,300,Residential,PUN/30/700-A,deed-031.pdf,2025-06-25,Flagged,BULK_SUBMISSION,Bulk 1/4 from W6 in 24h.
+P-032,W6,Wakad Row 2,Pune,300,Residential,PUN/30/701-A,deed-032.pdf,2025-06-25,Flagged,BULK_SUBMISSION,Bulk 2/4 from W6 in 24h.
+P-033,W6,Wakad Row 3,Pune,300,Residential,PUN/30/702-A,deed-033.pdf,2025-06-25,Flagged,BULK_SUBMISSION,Bulk 3/4 from W6 in 24h.
+P-034,W6,Wakad Row 4,Pune,300,Residential,PUN/30/703-A,deed-034.pdf,2025-06-25,Flagged,BULK_SUBMISSION,Bulk 4/4 from W6 in 24h -> FlaggedForReview emitted.
+P-035,W5,Kondapur Enclave 6,Hyderabad,430,Residential,HYD/14/821-A,deed-035.pdf,2025-07-02,Registered,NORMAL_SALE,Clean.
+P-036,W3,Juhu Tara Rd 3,Mumbai,260,Commercial,MUM/21/515-C,deed-036.pdf,2025-07-09,Registered,NORMAL_SALE,Clean.
+P-037,W2,Marine Drive Kochi 4,Kochi,380,Residential,KOC/08/525-A,deed-037.pdf,2025-07-16,Registered,NORMAL_SALE,Clean.
+P-038,W4,Anna Nagar W 10,Chennai,540,Residential,CHN/05/175-A,deed-038.pdf,2025-07-23,Registered,NORMAL_SALE,Clean.
+P-039,W1,Jayanagar 4th Block,Bengaluru,460,Residential,BLR/12/633-A,deed-039.pdf,2025-07-30,Registered,NORMAL_SALE,Clean.
+P-040,W7,Vasant Kunj C-9,Delhi,350,Residential,DEL/02/488-A,deed-040.pdf,2025-08-05,Pending,NORMAL_SALE,Left pending to populate the Registrar queue.

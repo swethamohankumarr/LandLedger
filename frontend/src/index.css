@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------------------------------------------------------------------
+   Design tokens — "Trust infrastructure meets modern fintech".
+   Dark is the default; [data-theme="light"] overrides.
+---------------------------------------------------------------------- */
+:root,
+:root[data-theme="dark"] {
+  --bg: #0b1020;
+  --bg-elev: #111933;
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-strong: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.09);
+  --text: #e9edf7;
+  --text-muted: #94a1c0;
+  --primary: #7c6cff;
+  --primary-soft: rgba(124, 108, 255, 0.16);
+  --emerald: #19cb8a;
+  --amber: #f6b445;
+  --rose: #fb5b73;
+  --sky: #49b6ff;
+  --mesh-1: rgba(124, 108, 255, 0.22);
+  --mesh-2: rgba(73, 182, 255, 0.14);
+  --mesh-3: rgba(25, 203, 138, 0.1);
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #f4f6fc;
+  --bg-elev: #ffffff;
+  --surface: rgba(16, 24, 48, 0.03);
+  --surface-strong: rgba(16, 24, 48, 0.05);
+  --border: rgba(16, 24, 48, 0.1);
+  --text: #141b2e;
+  --text-muted: #5a6680;
+  --primary: #5b4be0;
+  --primary-soft: rgba(91, 75, 224, 0.12);
+  --emerald: #0a9a66;
+  --amber: #c77d10;
+  --rose: #e03a54;
+  --sky: #1d82d6;
+  --mesh-1: rgba(91, 75, 224, 0.14);
+  --mesh-2: rgba(29, 130, 214, 0.1);
+  --mesh-3: rgba(10, 154, 102, 0.08);
+  color-scheme: light;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Gradient mesh backdrop. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60% 50% at 15% 0%, var(--mesh-1), transparent 60%),
+    radial-gradient(50% 50% at 90% 10%, var(--mesh-2), transparent 55%),
+    radial-gradient(60% 60% at 70% 90%, var(--mesh-3), transparent 60%);
+  pointer-events: none;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: "Space Grotesk", "Inter", sans-serif;
+}
+
+/* ----------------------------------------------------------------------
+   Component utilities
+---------------------------------------------------------------------- */
+@layer components {
+  .glass {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  .card {
+    @apply glass rounded-2xl shadow-card;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    --tw-ring-color: var(--primary);
+    --tw-ring-offset-color: var(--bg);
+  }
+  .btn:active {
+    transform: translateY(1px) scale(0.99);
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary), #5a63e8);
+    color: #fff;
+    box-shadow: 0 8px 24px -10px var(--primary);
+  }
+  .btn-primary:hover {
+    filter: brightness(1.08);
+  }
+  .btn-ghost {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-ghost:hover {
+    background: var(--surface-strong);
+  }
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .input {
+    @apply w-full rounded-xl px-3.5 py-2.5 text-sm outline-none transition;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+  .input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-soft);
+  }
+  .input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold;
+  }
+  .mono {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+  }
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide;
+    color: var(--text-muted);
+  }
+  .section-muted {
+    color: var(--text-muted);
+  }
+}
+
+/* Status pill colors */
+.pill-emerald { background: rgba(25, 203, 138, 0.14); color: var(--emerald); border: 1px solid rgba(25, 203, 138, 0.3); }
+.pill-amber   { background: rgba(246, 180, 69, 0.14); color: var(--amber); border: 1px solid rgba(246, 180, 69, 0.3); }
+.pill-rose    { background: rgba(251, 91, 115, 0.14); color: var(--rose); border: 1px solid rgba(251, 91, 115, 0.3); }
+.pill-primary { background: var(--primary-soft); color: var(--primary); border: 1px solid var(--border); }
+.pill-sky     { background: rgba(73, 182, 255, 0.14); color: var(--sky); border: 1px solid rgba(73, 182, 255, 0.3); }
+
+/* Skeleton shimmer */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-strong);
+  border-radius: 0.75rem;
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, var(--surface), transparent);
+  animation: shimmer 1.6s infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* Accessibility: respect reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .skeleton::after { animation: none; }
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}

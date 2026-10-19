@@ -1,0 +1,384 @@
+{
+  "generatedAt": "2026-10-19T12:21:25.389Z",
+  "synthetic": true,
+  "network": "hardhat",
+  "contractAddress": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "counts": {
+    "total": 40,
+    "registered": 30,
+    "rejected": 2,
+    "pending": 6,
+    "reverted": 2,
+    "flagged": 1
+  },
+  "rows": [
+    {
+      "property_ref": "P-001",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean residential plot."
+    },
+    {
+      "property_ref": "P-002",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Agricultural land."
+    },
+    {
+      "property_ref": "P-003",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Commercial office."
+    },
+    {
+      "property_ref": "P-006",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-004",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-005",
+      "scenario": "RAPID_FLIP",
+      "outcome": "Registered",
+      "reason": "Flipped 3x within 30 days (see transfers)."
+    },
+    {
+      "property_ref": "P-007",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-008",
+      "scenario": "CIRCULAR_TRADE",
+      "outcome": "Registered",
+      "reason": "Traded W2->W3->W2 (wash-trade pattern)."
+    },
+    {
+      "property_ref": "P-009",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-010",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-011",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Deed file later reused by P-030."
+    },
+    {
+      "property_ref": "P-012",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-014",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-015",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-013",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-016",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-017",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-018",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-019",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-020",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-021",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-022",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-023",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-024",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-025",
+      "scenario": "DUPLICATE_SURVEY",
+      "outcome": "Reverted (rejected on-chain)",
+      "reason": "DuplicateSurveyLocation(1)"
+    },
+    {
+      "property_ref": "P-026",
+      "scenario": "INVALID_SURVEY_FORMAT",
+      "outcome": "Rejected by Registrar",
+      "reason": "Survey number fails required format AAA/NN/NNN-X"
+    },
+    {
+      "property_ref": "P-027",
+      "scenario": "FORGED_DEED",
+      "outcome": "Rejected by Registrar",
+      "reason": "Deed failed Registrar manual verification"
+    },
+    {
+      "property_ref": "P-028",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-029",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Submitted (Pending)",
+      "reason": "Left in the Registrar queue to demo the pending workflow."
+    },
+    {
+      "property_ref": "P-030",
+      "scenario": "REUSED_DOCUMENT",
+      "outcome": "Reverted (rejected on-chain)",
+      "reason": "DuplicateDocumentHash(0x07c120192cb618799bc01338e13d6f071a5172b9e389a91018f3d7eff6538818)"
+    },
+    {
+      "property_ref": "P-031",
+      "scenario": "BULK_SUBMISSION",
+      "outcome": "Submitted (Pending)",
+      "reason": "Bulk 1/4 from W6 in 24h."
+    },
+    {
+      "property_ref": "P-032",
+      "scenario": "BULK_SUBMISSION",
+      "outcome": "Submitted (Pending)",
+      "reason": "Bulk 2/4 from W6 in 24h."
+    },
+    {
+      "property_ref": "P-033",
+      "scenario": "BULK_SUBMISSION",
+      "outcome": "Submitted (Pending)",
+      "reason": "Bulk 3/4 from W6 in 24h."
+    },
+    {
+      "property_ref": "P-034",
+      "scenario": "BULK_SUBMISSION",
+      "outcome": "Submitted + FLAGGED",
+      "reason": "Wallet exceeded 3 submissions within 24h window (possible bulk spam)"
+    },
+    {
+      "property_ref": "P-035",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-036",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-037",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-038",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-039",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Registered",
+      "reason": "Clean."
+    },
+    {
+      "property_ref": "P-040",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Submitted (Pending)",
+      "reason": "Left pending to populate the Registrar queue."
+    }
+  ],
+  "suspicious": [
+    {
+      "property_ref": "P-025",
+      "scenario": "DUPLICATE_SURVEY",
+      "outcome": "Reverted (rejected on-chain)",
+      "reason": "DuplicateSurveyLocation(1)"
+    },
+    {
+      "property_ref": "P-026",
+      "scenario": "INVALID_SURVEY_FORMAT",
+      "outcome": "Rejected by Registrar",
+      "reason": "Survey number fails required format AAA/NN/NNN-X"
+    },
+    {
+      "property_ref": "P-027",
+      "scenario": "FORGED_DEED",
+      "outcome": "Rejected by Registrar",
+      "reason": "Deed failed Registrar manual verification"
+    },
+    {
+      "property_ref": "P-030",
+      "scenario": "REUSED_DOCUMENT",
+      "outcome": "Reverted (rejected on-chain)",
+      "reason": "DuplicateDocumentHash(0x07c120192cb618799bc01338e13d6f071a5172b9e389a91018f3d7eff6538818)"
+    },
+    {
+      "property_ref": "P-034",
+      "scenario": "BULK_SUBMISSION",
+      "outcome": "Submitted + FLAGGED",
+      "reason": "Wallet exceeded 3 submissions within 24h window (possible bulk spam)"
+    }
+  ],
+  "flaggedForReview": [
+    {
+      "propertyId": "32",
+      "reason": "Wallet exceeded 3 submissions within 24h window (possible bulk spam)"
+    }
+  ],
+  "transfers": [
+    {
+      "transfer_id": "T-001",
+      "property_ref": "P-005",
+      "from_wallet_id": "W5",
+      "to_wallet_id": "W1",
+      "fromAddress": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+      "toAddress": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "date": "2025-07-05",
+      "scenario": "RAPID_FLIP",
+      "outcome": "Completed"
+    },
+    {
+      "transfer_id": "T-002",
+      "property_ref": "P-005",
+      "from_wallet_id": "W1",
+      "to_wallet_id": "W2",
+      "fromAddress": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "toAddress": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "date": "2025-07-14",
+      "scenario": "RAPID_FLIP",
+      "outcome": "Completed"
+    },
+    {
+      "transfer_id": "T-003",
+      "property_ref": "P-005",
+      "from_wallet_id": "W2",
+      "to_wallet_id": "W3",
+      "fromAddress": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "toAddress": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "date": "2025-07-22",
+      "scenario": "RAPID_FLIP",
+      "outcome": "Completed"
+    },
+    {
+      "transfer_id": "T-004",
+      "property_ref": "P-008",
+      "from_wallet_id": "W2",
+      "to_wallet_id": "W3",
+      "fromAddress": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "toAddress": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "date": "2025-08-01",
+      "scenario": "CIRCULAR_TRADE",
+      "outcome": "Completed"
+    },
+    {
+      "transfer_id": "T-005",
+      "property_ref": "P-008",
+      "from_wallet_id": "W3",
+      "to_wallet_id": "W2",
+      "fromAddress": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "toAddress": "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+      "date": "2025-08-06",
+      "scenario": "CIRCULAR_TRADE",
+      "outcome": "Completed"
+    },
+    {
+      "transfer_id": "T-006",
+      "property_ref": "P-001",
+      "from_wallet_id": "W1",
+      "to_wallet_id": "W4",
+      "fromAddress": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "toAddress": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+      "date": "2025-09-01",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Completed"
+    },
+    {
+      "transfer_id": "T-007",
+      "property_ref": "P-003",
+      "from_wallet_id": "W3",
+      "to_wallet_id": "W5",
+      "fromAddress": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "toAddress": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+      "date": "2025-09-15",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Completed"
+    },
+    {
+      "transfer_id": "T-008",
+      "property_ref": "P-010",
+      "from_wallet_id": "W3",
+      "to_wallet_id": "W6",
+      "fromAddress": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+      "toAddress": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+      "date": "2025-10-02",
+      "scenario": "NORMAL_SALE",
+      "outcome": "Completed"
+    }
+  ]
+}

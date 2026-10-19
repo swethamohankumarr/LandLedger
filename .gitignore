@@ -1,0 +1,30 @@
+# deps
+node_modules
+frontend/node_modules
+
+# hardhat
+artifacts
+cache
+typechain-types
+coverage
+coverage.json
+
+# env / secrets
+.env
+.env.local
+frontend/.env
+frontend/.env.local
+
+# build
+dist
+frontend/dist
+.vercel
+
+# os / editor
+.DS_Store
+*.log
+npm-debug.log*
+
+# generated IPFS mock store (keep .gitkeep)
+data/.mock-ipfs/*
+!data/.mock-ipfs/.gitkeep
